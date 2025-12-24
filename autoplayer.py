@@ -2,12 +2,10 @@
 '''
 This script will randomly play videos back to back in a window.
 INSTRUCTIONS:
-    - Put this script in its own folder
     - Put all video files into a folder inside that one called "vids"
     - Install all libraries, with specific versions for moviepy==1.0.3 and pillow==9.5.0
     - Adjust the values in CONSTANTS tab to fit your desires (don't be stupid)
         - If the videos are laggy, reduce the MAX_FPS and RESOLUTION.
-    - Run the script
 '''
 
 ###########
