@@ -92,7 +92,7 @@ def load_videos():
             if int(clip.duration) < MINIMUM_PLAYBACK: clip.loop(duration=MINIMUM_PLAYBACK)
             if PLAY_LENGTH != -1: clipQueue.add([file, clip.loop(duration=PLAY_LENGTH)])
             else: clipQueue.add([file, clip])
-        except OSError: print('Corrupted file ignored.')
+        except OSError: print('\t(Corrupted file ignored.)')
         r -= 1
     return
 
@@ -147,10 +147,10 @@ def play_individual_clip(c):
         frame = clip.get_frame(0)
         frameSurface = pygame.surfarray.make_surface(np.rot90(frame))
         frameSurface = pygame.transform.flip(frameSurface, True, False)
-        videoRect = frameSurface.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+        clipRect = frameSurface.get_rect(center=(WIDTH // 2, HEIGHT // 2))
         
         screen.fill((0, 0, 0))
-        screen.blit(frameSurface, videoRect)
+        screen.blit(frameSurface, clipRect)
         pygame.display.update()
         # hold the frame for the proper time
         try: sleep(PLAY_LENGTH)
