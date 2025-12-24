@@ -134,10 +134,10 @@ def play_individual_clip(c):
             # convert moviepy to pygame format
             frameSurface = pygame.surfarray.make_surface(frame)
             frameSurface = pygame.transform.flip(frameSurface, True, False)
-            videoRect = frameSurface.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+            clipRect = frameSurface.get_rect(center=(WIDTH // 2, HEIGHT // 2))
             # draw
             screen.fill((0, 0, 0))
-            screen.blit(frameSurface, videoRect)
+            screen.blit(frameSurface, clipRect)
             pygame.display.update()
             # fps
             CLOCK.tick(clip.fps)
