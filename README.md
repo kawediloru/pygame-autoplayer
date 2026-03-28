@@ -8,4 +8,4 @@ INSTRUCTIONS:
 
 Then you can run `main.py` to watch all the videos you wanna,
 > [!NOTE]
-> Because PyGame is just not optimized, there could be desyncs. But I don't care
+> Because Python is slow, there could be desyncs. But I don't care
